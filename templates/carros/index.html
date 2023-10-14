@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleção de Carros</title>
+</head>
+<body>
+    {% for carro in carros %}
+    <div>
+        <h1>{{ carro.nome }}</h1>
+        <p>{{ carro.marca }}</p>
+        <p>{{ carro.cor }}</p>
+        <p>{{ carro.ano_fabricacao }}</p>
+        <p>{{ carro.ano_entrada }}</p>
+        <a href="{% url 'delete' carro.id %}">remover</a>
+    </div>
+    {% endfor %}
+</body>
+</html>
